@@ -2,3 +2,13 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.beer__image-wrap {
+  max-width: 100px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.beer__image {
+  width: 100%;
+}

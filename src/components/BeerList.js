@@ -1,10 +1,15 @@
 import React from "react";
 import "../styles/beerlist.css";
 
-const BeerList = () => {
+import Beer from "./Beer";
+
+const BeerList = ({beers}) => {
   return (
     <div className="beerlist">
-      Beerlist: Wrapper component to display list of beers
+      Beerlist: Number of beers to display: {beers.length}
+      {beers.map(beer => {
+        return <Beer key={beer.id} beer={beer} />
+      })}
     </div>
   );
 };
