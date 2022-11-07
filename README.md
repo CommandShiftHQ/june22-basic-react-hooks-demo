@@ -14,6 +14,13 @@ Clone down the repo and run
 npm install
 ```
 
+## Follow along with the lecture
+To follow along the the lecture recording, clone down and install the repo as above then checkout the commit titled `Import example JSON response` as follows:
+```
+git checkout d3b077c746958dd1dee24efb7949a15940827ee6
+```
+Your local repo will now be the same position as aat the start of the demo
+
 ## Available Scripts
 
 In the project directory, you can run:
