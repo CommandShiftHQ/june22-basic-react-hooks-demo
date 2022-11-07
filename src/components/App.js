@@ -6,6 +6,11 @@ import BeerList from "./BeerList";
 
 const App = () => {
   const [beers, setBeers] = useState([]);
+  const [darkTheme, setDarkTheme] = useState(true);
+
+  const handleToggle = () => {
+    setDarkTheme((prev) => !prev);
+  };
 
   const handleClick = (event) => {
     let query = "https://api.punkapi.com/v2/beers/";
@@ -41,7 +46,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="app">
+    <div className={`app ${darkTheme ? "app--dark" : "app--light"}`}>
       App: {beers[0]?.name}
       {beers && <BeerList beers={beers} />}
       <button value="all" onClick={handleClick}>
@@ -50,6 +55,7 @@ const App = () => {
       <button value="random" onClick={handleClick}>
         Get a random beer
       </button>
+      <button onClick={handleToggle}>Toggle theme</button>
     </div>
   );
 };
